@@ -1,0 +1,10 @@
+﻿  LevelEditor.cpp
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(10,34): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(11,33): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(12,37): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(13,36): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(14,36): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(15,34): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(124,32): warning C4390: ';': empty controlled statement found; is this the intent?
+C:\Users\1015H\source\repos\ConsoleApplication\LevelEditor\LevelEditor.cpp(128,32): warning C4390: ';': empty controlled statement found; is this the intent?
+  LevelEditor.vcxproj -> C:\Users\1015H\source\repos\ConsoleApplication\x64\Debug\LevelEditor.exe
