@@ -9,6 +9,7 @@ namespace pf {
 	using unit = unsigned int;
 	using HeuristicFunction = std::function<unit(const PathFinderAlgo&, const PathFinderAlgo&, int)>;
 
+	//Algorithm is finding the parent Node and begins branching
 	struct Node {
 		Node() : pos(0,0), parent(-1, 1), a(0), b(0), c(0) {}
 		Node(const PathFinderAlgo pos, unit a) : pos(pos), parent(-1, 1), a(a), b(0), c(0) {}
@@ -22,6 +23,8 @@ namespace pf {
 
 
 	};
+	
+	//Operator begins looping through each movement and detect whether the movement is continuous or not
 
 	inline bool operator <(const Node& i, const Node& j) { return i.a < j.a; }
 	
@@ -56,7 +59,8 @@ namespace pf {
 		HeuristicFunction m_heuristic;
 
 	};
-
+	
+	//Manhattan and Euclidean algorithm for heuristic algorithm
 	namespace heuristic {
 		unit manhattan(const PathFinderAlgo& v1, const PathFinderAlgo& v2, int weight);
 		unit euclidean(const PathFinderAlgo& v1, const PathFinderAlgo& v2, int weight);
