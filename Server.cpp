@@ -20,6 +20,7 @@ struct terminal
     thread thr;
 }
 
+//Threading to different clients
 vector<terminal> clients;
 int seed = 0;
 mutex cout_mtx, clients_mtx;
@@ -32,6 +33,7 @@ void end_connection(int id);
 void handle_client(int client_socket, int id);
 
 int main(){
+    //Calling for the socket
     int server_socket;
     if((server_socket=socket(AF_INET, SOCK_STREAM,0))==-1)
     {
@@ -56,6 +58,7 @@ int main(){
         exit(-1);
     }
 
+    //Client-socket address
     struct sockaddr_in client;
     int client_socket;
     unsigned int len = sizeof(sockaddr_in);
@@ -69,6 +72,7 @@ int main(){
             perror("accept error: ");
             exit(-1);
         }
+        //Threading through the clients
         seed++;
         thread thr(handle_client, client_socket, seed);
         lock_guard<mutex> guard(clients_mtx);
@@ -84,6 +88,7 @@ int main(){
     return 0;
 }
 
+//Getting name of server
 void set_name(int id, char user[])
 {
     for (int x = 0; x < clietns.size(); x++)
@@ -103,6 +108,7 @@ void shared_print(string str, bool endLine = true)
         cout << endl;
 }
 
+//Announce that the client recieved message
 int broadcast_message(string message, int sender_id)
 {
     char temp[MAX_LEN];
@@ -116,6 +122,7 @@ int broadcast_message(string message, int sender_id)
     }
 }
 
+//Ending connection
 void end_connection(int id)
 {
     for (int x = 0; x < clients.size(); x++)
@@ -131,6 +138,7 @@ void end_connection(int id)
     }
 }
 
+//Calling from client socket
 void handle_client(int client_socket, int id)
 {
     char name[MAX_LEN], str[MAX_LEN];
