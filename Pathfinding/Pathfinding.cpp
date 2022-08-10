@@ -8,7 +8,7 @@ int main() {
     //Declare pathfinding in game
     pf::AStar maze;
 
-    //Load Map level by declaring the map level the start finding the path
+    //Algorithm begins searching for path as the mad loads
     maze.loadMap("Level1.txt");
     maze.setDiagonalMovement(true);
     auto path = maze.findPath(pf::PathFinderAlgo(0, 0), pf::PathFinderAlgo(10, 7), pf::heuristic::euclidean, 10); //automatically finds the position using heuristic analysis
