@@ -17,7 +17,8 @@ namespace pf {
 
 		m_directions = { {-1, 0}, {1, 0}, {0, 1}, {0, -1}, {-1, -1}, {1, 1}, {-1, 1}, {1, -1} };
 	}
-
+     
+	//Declares algorithm's position and the heuristic function to find the path
 	std::vector<PathFinderAlgo> AStar::findPath(const PathFinderAlgo& startPos, const PathFinderAlgo targetPos, HeuristicFunction heuristicFunc, int weight) {
 		m_startPos = startPos;
 		m_targetPos = targetPos;
@@ -61,7 +62,8 @@ namespace pf {
 		return buildPath();
 
 	}
-
+	
+	//Algorithm builds their path in the game
 	std::vector<PathFinderAlgo> AStar::buildPath() const {
 		std::vector<PathFinderAlgo> path;
 		auto currentPos = m_targetPos;
@@ -77,7 +79,8 @@ namespace pf {
 		return path;
 
 	}
-
+	
+	//Map begins loading 
 	void AStar::loadMap(const std::string& fileName) {
 		std::ifstream file(fileName);
 		if (file.is_open()) {
@@ -105,28 +108,32 @@ namespace pf {
 			file.close();
 		}
 	}
+	//Set diagonal movements if the direction is diagonal
 	void AStar::setDiagonalMovement(bool enable) {
 		m_nrOfDirections = (enable) ? 8 : 4;
 	}
+	//If the path is valid
 	bool AStar::isValid(const PathFinderAlgo& pos) const
 	{
 		return (pos.i >= 0) && (pos.i < m_dimensions.i) &&
 			(pos.j >= 0) && (pos.j < m_dimensions.j);
 	}
-
+	//If the path is blocked
 	bool AStar::isBlocked(int index) const {
 		return (m_grid[index] == 0);
 	}
-
+	
+	//Position is declared in 1D array
 	int AStar::covertTo1D(const PathFinderAlgo pos) const {
 		return (pos.j * m_dimensions.i) + pos.i;
 	}
-
+	//Heuristic function using Manhattan algorithm
 	unit heuristic::manhattan(const PathFinderAlgo& v1, const PathFinderAlgo& v2, int weight) {
 		const auto delta = PathFinderAlgo::getDelta(v1, v2);
 		return static_cast<unit>(weight * (delta.i + delta.j));
 	}
-
+	
+	//Also using Euclidean function
 	unit heuristic::euclidean(const PathFinderAlgo& v1, const PathFinderAlgo& v2, int weight) {
 		const auto delta = PathFinderAlgo::getDelta(v1, v2);
 		return static_cast<unit>(weight * sqrt((delta.i * delta.y) + (delta.i * delta.j)));
