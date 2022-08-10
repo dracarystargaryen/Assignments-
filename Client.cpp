@@ -25,6 +25,7 @@ void recv_message(int client_socket);
 
 int main()
 {
+    //Client socket call function
     if((client_socket = socket(AF_INET, SOCK_STREAM, 0)) == -1)
     {
         perror("socket: ");
@@ -42,6 +43,7 @@ int main()
         exit(-1);
     }
 
+    //Prompting user for their name
     signal(SIGNIT, catch_ctrl_c);
     char name(MAX_LEN);
     cout << "Enter your name: ";
@@ -63,6 +65,8 @@ int main()
 
 }
 
+
+//Using CTRL C to stop the connection
 void catch_ctrl_c(int signal)
 {
     char str[MAX_LEN] = "#exit";
@@ -74,6 +78,7 @@ void catch_ctrl_c(int signal)
     exit(signal);
 }
 
+//Erasing text from prompt
 int textErase(int cnt)
 {
     char backspace = 0;
@@ -83,6 +88,7 @@ int textErase(int cnt)
     }
 }
 
+//Sending message
 void send_message(int client_socket)
 {
     while(1)
@@ -101,6 +107,7 @@ void send_message(int client_socket)
     }
 }
 
+//Recieving messages
 void recv_message(int client_socket)
 {
     while(1)
