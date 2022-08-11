@@ -1,0 +1,50 @@
+﻿  Game.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Game.h(2,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Game.h(3,10): warning C4067: unexpected tokens following preprocessor directive - expected a newline
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Game.h(22,13): error C2535: 'bool Game::Load(void)': member function already defined or declared
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Game.h(19): message : see declaration of 'Game::Load'
+  GameplayState.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\GameplayState.cpp(260,17): error C2660: 'Level::Draw': function does not take 0 arguments
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(17,7): message : see declaration of 'Level::Draw'
+  Level.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(10,14): error C2065: 'PlaceableActor': undeclared identifier
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(10,29): error C2059: syntax error: '>'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(18,16): error C2143: syntax error: missing ';' before '*'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(18,16): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(18,43): error C2238: unexpected token(s) preceding ';'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(10,24): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(11,22): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(12,23): warning C4309: 'initializing': truncation of constant value
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(15,16): error C2374: 'WALLL': redefinition; multiple initialization
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(10): message : see declaration of 'WALLL'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(16,16): error C2374: 'KEY': redefinition; multiple initialization
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(11): message : see declaration of 'KEY'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(17,16): error C2374: 'DOOR': redefinition; multiple initialization
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(12): message : see declaration of 'DOOR'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(18,16): error C2374: 'GOAL': redefinition; multiple initialization
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MazeGame.cpp(13): message : see declaration of 'GOAL'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(152,24): error C2039: 'UpdateActor': is not a member of 'Level'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.h(5): message : see declaration of 'Level'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(156,20): error C2065: 'm_pActors': undeclared identifier
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(156,45): error C3536: 'actor': cannot be used before it is initialized
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(156,48): error C2065: 'm_pActors': undeclared identifier
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(158,4): error C2100: illegal indirection
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(160,9): error C2100: illegal indirection
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(160,17): error C2059: syntax error: '->'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(160,29): error C2059: syntax error: ')'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(161,3): error C2143: syntax error: missing ';' before '{'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(165,13): error C2100: illegal indirection
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(165,45): error C2100: illegal indirection
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(168,21): error C2100: illegal indirection
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(168,28): error C2440: '=': cannot convert from 'int' to 'PlaceableActor *'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Level.cpp(168,22): message : Conversion from integral type to pointer type requires reinterpret_cast, C-style cast or parenthesized function-style cast
+  LoseState.cpp
+  MainMenuState.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MainMenuState.cpp(1,4): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MainMenuState.cpp(1,7): error C2146: syntax error: missing ')' before identifier 'sloc'
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\MainMenuState.cpp(3,10): fatal error C1083: Cannot open include file: 'MainMenuState.h': No such file or directory
+  StateMachineExampleGame.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\StateMachineExampleGame.cpp(3,10): fatal error C1083: Cannot open include file: 'MainMenuState.h': No such file or directory
+  Win.cpp
+C:\Users\1015H\OneDrive\Visual Studio Code\ConsoleApplication\MazeGame\Win.cpp(27): fatal error C1075: '{': no matching token found
+  Generating Code...
